@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aimodel-predictor-service
+spec:
+  selector:
+    app: aimodel-app
+  ports: 
+    - name: http
+      port: 80
+      targetPort: 8080   

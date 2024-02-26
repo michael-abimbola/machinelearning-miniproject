@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:  
+  name: aimodel-predictor-deployment
+  labels: 
+    app: aimodel-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aimodel-app
+  template:   
+    metadata:
+      labels:
+        app: aimodel-app
+    spec:                 
+      containers:
+      - name: aimodel-app
+        image: mikoko/aidockerimage:0.01
+        ports:
+        - containerPort: 8080
