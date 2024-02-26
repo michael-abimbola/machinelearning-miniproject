@@ -11,7 +11,7 @@ app = FastAPI()
 
 @app.get("/")
 def reed_root():
-    return{"message": "Iris model API"}
+    return{"message": "Iris model API!!"}
 
 @app.post("/predict")
 def predict(data: dict):
